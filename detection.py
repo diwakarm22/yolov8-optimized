@@ -5,11 +5,13 @@ import os
 from ultralytics import YOLO
 from ultralytics.utils.plotting import Annotator  # ultralytics.yolo.utils.plotting is deprecated
 
+
 yolo_model = YOLO(r"C:\Users\DIWAKAR\PycharmProjects\yolov8_optimized\Pathole_yolov8\runs\detect\train2_optimization_done_model_size_2MB\weights\best.pt")
 
 def detect():
     video_path = "pothole_video.mp4"
     cap = cv2.VideoCapture(video_path)
+    print("detection-starts")
             
     while cap.isOpened(): 
         ret, frame = cap.read()
